@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.0 — 2026-09-01
+
+- **Multi-bar support**: the companion now identifies its machine (stable id + hostname). With several Macs online, exactly one records each session (adoption token, server-authoritative, switchable from the web while the timer runs); segments from non-adopted machines are flagged and never billable
+- Web always names the machine doing the logging: "Activity is being logged on: <hostname>" while running, list of online companions at start, offline banner names the last-seen machine
+- Zero companions online: start stays hard-blocked with the red notice
+- Bar popover shows "Activity is being logged on: <hostname>" under the Today header
+
 ## v1.3.0 — 2026-09-01
 
 - **Popover now mirrors the web 1:1**: same Active/Inactive columns, same rows, same ordering, same durations (down to the second) as the web activity breakdown — "your manager sees what you see" is now literal
