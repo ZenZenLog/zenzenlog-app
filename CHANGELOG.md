@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.3.0 — 2026-09-01
+
+- **Popover now mirrors the web 1:1**: same Active/Inactive columns, same rows, same ordering, same durations (down to the second) as the web activity breakdown — "your manager sees what you see" is now literal
+- **Locked/Sleep**: `loginwindow` activity displays as `Locked/Sleep` everywhere
+- **Session separators** in the popover timeline; `+N more in web app` opens the dashboard
+- **Bar-offline transparency**: relaunching after a quit/crash records a visible "bar offline" gap row (counts as inactive, never billable); the web shows an amber "companion offline" banner ~90s after the bar stops heartbeating
+- **Post-wake recording fix**: activity after unlock was sometimes stuck classified as sleep
+- **Renamed**: user-facing "entries" → "sessions" (one timer run = one session)
+- **Admin**: unpaid totals and per-entry value now compute from active time (FOCUS+GAP), not raw duration; Active column in entry tables
+- Versions: bar 1.3.0, web 1.3.0; server handshake now requires bar ≥ 1.3.0
+
 ## v1.2.1 — 2026-08-30
 
 - **Stop & Quit reliability**: app now waits for server to confirm timer stop before terminating (no more orphaned timers)
