@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.5.0 — 2026-09-02
+
+- **Reconciliation**: you now review a finished billing period before it goes to your client. Remove a whole session, or a single activity row you'd rather not bill, and undo either freely — until you submit. Removed time stops counting toward your total immediately, so privacy costs exactly the minutes it covers
+- **Billing periods**: work is grouped into whole periods (weekly by default, or monthly — your admin sets the cadence per freelancer). You submit one period at a time, oldest first, and only once it has finished on the wall clock. Submitting is final: it permanently deletes what you removed and cannot be taken back, and the confirmation spells out exactly what will be destroyed
+- **Time zones**: pick your own (defaults to Pacific). Session times display in your clock; period boundaries stay UTC-anchored so everyone shares one billing calendar, and each period card shows its own start and end in your local time
+- **Recording fixes (bar)**: stopping the timer from the web used to silently kill the companion's sync loop — the next session then recorded nothing and billed as wall clock. Also fixed: the last segment of every session was being discarded; activity was not followed onto the successor session after an idle/sleep auto-split; switching machines mid-session did not resume logging on the new Mac; and an idle Mac could win the recording token from the one actually in use
+- **Billing integrity (server)**: duplicate activity uploads can no longer be counted twice (idempotent ingest with a uniqueness constraint); two near-simultaneous starts can no longer create two overlapping running sessions; merging an idle gap no longer discards the absorbed session's activity; and payouts now price the same active time every screen displays
+- Versions: bar 1.5.0, web 1.5.0. The server now requires bar ≥ 1.4.0 (the first version that identifies its machine, which is what makes multi-Mac adoption enforceable). Bar and web share one version number from here on
+
 ## v1.4.0 — 2026-09-01
 
 - **Multi-bar support**: the companion now identifies its machine (stable id + hostname). With several Macs online, exactly one records each session (adoption token, server-authoritative, switchable from the web while the timer runs); segments from non-adopted machines are flagged and never billable
