@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.5.2 — 2026-09-04
+
+- **Your unsubmitted work is yours**: your client can no longer see a session's activity until you submit the billing period it belongs to. Until then you can review it, remove whole sessions or single activity rows, and undo — and anything still marked for removal is permanently deleted at submission, never shown to them. This is now enforced by the server, not just hidden in the interface
+- **One privacy policy**: the policy lives in one place and the menu-bar app fetches it, so the app and the web can no longer say different things (they already had — one still used the old product name). The app keeps a clearly-labelled offline copy of the two sections that are absolute promises, for when it can't reach the server
+- **Policy §5 rewritten** to say plainly when your client sees your work, and to be honest that whoever operates the service can technically reach stored data — no hosted service can claim otherwise. Nothing changed about *what* is collected, so no re-consent is needed; the policy revision date moves, the collection version does not
+- **Consistent ordering** (v1.5.1): sessions and activity rows had disagreed about direction. Everything now reads newest-first, matching the menu-bar app
+- **Approved sessions keep their full record** (v1.5.1): compacting a session at approval used to drop GAP time — which is billable and was part of the approved amount — and count activity from non-adopted machines, which never is. The evidence shown for a bill now matches the bill
+- Versions: bar 1.5.2, web 1.5.2. Server still accepts bar ≥ 1.4.0
+
 ## v1.5.0 — 2026-09-02
 
 - **Reconciliation**: you now review a finished billing period before it goes to your client. Remove a whole session, or a single activity row you'd rather not bill, and undo either freely — until you submit. Removed time stops counting toward your total immediately, so privacy costs exactly the minutes it covers
