@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.7.10 — 2026-09-08
+
+Menu bar app and web app 1.7.10.
+
+**The update notice appears when you look for it (bar)**
+- The app asked the server about new versions every 30 minutes, so after a
+  release you could sit on an old version for half an hour with no notice —
+  which reads as the notice being broken rather than slow. It now asks every
+  five minutes, and again the moment you open either panel, because that is
+  when you are actually asking the question
+
+**Website**
+- The (i) beside the download version sits on the line properly now
+
 ## v1.7.9 — 2026-09-08
 
 Menu bar app and web app 1.7.9.
