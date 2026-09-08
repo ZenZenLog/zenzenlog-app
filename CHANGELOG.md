@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.7.8 — 2026-09-08
+
+Menu bar app and web app 1.7.8.
+
+**The welcome card looks the same on every Mac (bar)**
+- The "Got it" button picked up a rectangular frame around it — present on some
+  Macs, absent on others, and a different colour again on a third. That was the
+  system's focus ring, which macOS draws around the default button when Full
+  Keyboard Access is switched on, tinted with whatever accent colour that Mac
+  uses. On a card that paints its own colours it looked like a mistake. It is
+  gone; Return still dismisses the card
+
+**Checking what the server expects (web)**
+- The version policy — the oldest menu bar app accepted, and the newest
+  recommended — is now readable at /api/version. It was only ever handed to
+  apps that were already signed in, which made "what is required right now?"
+  impossible to answer without signing in or reading the source
+
 ## v1.7.7 — 2026-09-08
 
 Menu bar app and web app 1.7.7.
