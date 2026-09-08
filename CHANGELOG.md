@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.7.5 — 2026-09-08
+
+Menu bar app and web app 1.7.5.
+
+**Knowing which Mac you are at, accurately (web + bar)**
+- 1.7.4 made the timer follow the Mac you are actually working on, but the
+  signal behind it was a yes/no answer to "was there input in the last five
+  seconds?", asked every fifteen seconds. A Mac only counted if you happened to
+  move in the right five-second window — roughly one check in three, even while
+  typing steadily. The menu bar app now reports how long it has been since you
+  last touched that Mac, so the answer is measured rather than sampled
+
+**The menu bar panel (bar)**
+- The privacy entry added in 1.7.4 was wedged against the edge of the panel
+  with no spacing. It now sits properly, with an icon and the same chevron the
+  panel already uses for things that open, and Quit is aligned with it
+
 ## v1.7.4 — 2026-09-08
 
 Menu bar app and web app 1.7.4.
