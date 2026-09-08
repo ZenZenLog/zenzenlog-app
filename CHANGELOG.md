@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.7.6 — 2026-09-08
+
+Menu bar app and web app 1.7.6.
+
+**ZenZenLog updates itself now (bar)**
+- Until this release, updating meant noticing there was an update, going to the
+  website, downloading, unzipping, dragging to Applications and relaunching —
+  for every release, on every Mac. ZenZenLog now checks for updates on its own
+  and installs them with one click, like any other Mac app. There is also a
+  "Check for Updates…" item in the right-click panel for when you want to ask
+- This also fixes a problem that could not be fixed any other way: when the
+  server required a newer version, older apps had no way to tell you, because
+  the screen that says so only exists in versions that already have it. An app
+  that can carry itself forward does not need the old version to cooperate
+- Updates are cryptographically signed and verified before installation. An
+  altered download is refused
+
+**Smaller things (bar)**
+- The privacy policy window opens next to the menu bar panel you opened it
+  from, instead of in the middle of the screen
+
 ## v1.7.5 — 2026-09-08
 
 Menu bar app and web app 1.7.5.
