@@ -1,5 +1,57 @@
 # Changelog
 
+## v1.7.3 — 2026-09-08
+
+Menu bar app and web app 1.7.3. A pass over what happens when the server is
+updated, or simply unreachable, while you are recording. The short version:
+your recorded time was already safe, but several things around it were not.
+
+**Your saved password survived a bad moment (bar)**
+- If the app started while the server was unreachable — mid-update, on a flaky
+  connection, or waking somewhere without Wi-Fi — it treated that exactly like a
+  wrong password: it signed you out and **deleted your saved credentials**. You
+  had to type your password again, and nothing retried on its own. Only a real
+  rejection forgets your credentials now; anything else keeps them and retries
+  quietly in the background
+
+**Quitting can no longer strand a running session (bar)**
+- Quitting with the timer running was supposed to wait for the server to
+  confirm the stop. It didn't — it quit regardless, and a stop lost to a network
+  blip left your session running on the server, which then blocked submitting
+  that whole billing period. The app now stays open and tells you, rather than
+  leaving a session you can't see and can't submit
+
+**Finished work keeps trying to upload (bar)**
+- Your last few minutes were uploaded once when you pressed stop. If that single
+  attempt failed, the work waited until the next launch — by which point the
+  server no longer accepted it, and the session could bill nothing at all. It
+  now keeps trying for a few minutes
+- Work the server explicitly refused is no longer deleted from your Mac. It was,
+  which meant the one copy of it disappeared
+
+**An approved session keeps its evidence (web)**
+- Approving compacts detailed activity into a summary. The raw rows were deleted
+  first and the summary written afterwards, so an interruption in between
+  destroyed the detail permanently and left nothing in its place. Both now happen
+  together, or neither does
+
+**Honest messages when the server is busy (web)**
+- Errors during an update showed up as `Unexpected token '<'`. They now say what
+  actually happened
+- Pressing Submit and losing the reply reported a failure over something that
+  had already succeeded. It now re-reads and shows you the truth
+- "Menu-bar companion offline — activity is **not** being logged" was often
+  simply wrong: the app records to your Mac whether or not it can reach the
+  server. It now says we haven't heard from it recently, and what that does and
+  does not mean
+- An update notice can no longer miss a re-release of the same version
+
+**Under the hood**
+- The server refuses to start without its session key rather than falling back to
+  a placeholder, which would have signed everyone out with no explanation
+- Submitting a long billing period has more time to finish before giving up
+- The app can now recommend a new version without requiring it
+
 ## v1.7.2 — 2026-09-08
 
 Menu bar app and web app 1.7.2.
