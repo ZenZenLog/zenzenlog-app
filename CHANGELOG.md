@@ -1,5 +1,57 @@
 # Changelog
 
+## v1.7.0 — 2026-09-07
+
+Menu bar app 1.7.0. The web app moved continuously from 1.5.3 to 1.6.2 over the
+same days; everything since v1.5.2 is collected here.
+
+**Tab switches are sensed, not sampled (bar)**
+- Window titles used to be checked every 15 seconds. A tab you visited between
+  two checks was never recorded, and its time was filed under the *previous*
+  tab — so a page you had already left could appear on your timesheet. Titles
+  now register the moment they change, so each tab gets its own row no matter
+  how quickly you move. The old 15-second check remains as a safety net for apps
+  that announce nothing, and nothing changes on a Mac where Accessibility has
+  not been granted
+
+**Review & submit is built around three things, and now looks like it**
+- A billing period, the sessions inside it, and the activity inside those, each
+  with its own heading, indentation and background. Previously they carried
+  almost the same visual weight, which made a billing period's status easy to
+  read as a claim about the session inside it
+- Sessions are numbered ("Session 2 of 3") under a heading that names how many
+  the billing period holds
+- Every billing period carries a coloured left bracket: green when you can
+  submit it, teal while it is still running, grey while an earlier one comes
+  first
+- It is called a "billing period" everywhere now, never a bare "period", and
+  weekly periods show weekdays — "Mon, Aug 24 – Sun, Aug 30, 2026" — so the
+  Monday-to-Sunday shape is visible at a glance
+- Opening the page expands the billing period holding your most recent work.
+  It used to expand the oldest unsubmitted one, so old work sat open while
+  today's stayed hidden
+
+**Billable time and money, front and centre**
+- Both now lead the billing period and session headers. Elapsed time is still
+  shown, as a note rather than the headline
+- Reconciliation uses h:mm:ss throughout, seconds in smaller type — precise
+  enough to add up, quiet enough to skim
+- The activity table has Active and Inactive columns again (it had briefly
+  collapsed to a single "Length"), and a totals row, so the Active column
+  visibly adds up to the session's billable figure
+- A badge that said only "Waiting" now says "Earlier billing period first", and
+  a running billing period says when it closes: "Open until Sep 13"
+- The billing period card shows what Submit will actually send, rather than
+  totals that included already-submitted work
+
+**Fixes**
+- The page could show a finished session as still running: it never re-read
+  after loading. It now has a Refresh control, re-reads when you return to the
+  tab, and follows a running session on its own
+- "Remove" sat beside "Hide activity" and read as though it removed the activity
+  view. The activity toggle moved, and the button says what it does: "Remove
+  entire session (7 activities)"
+
 ## v1.5.2 — 2026-09-04
 
 - **Your unsubmitted work is yours**: your client can no longer see a session's activity until you submit the billing period it belongs to. Until then you can review it, remove whole sessions or single activity rows, and undo — and anything still marked for removal is permanently deleted at submission, never shown to them. This is now enforced by the server, not just hidden in the interface
