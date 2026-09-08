@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.7.4 — 2026-09-08
+
+Menu bar app and web app 1.7.4.
+
+**The Mac you are actually working on gets the timer (web + bar)**
+- Starting from the web app could hand recording to a different Mac than the one
+  you were sitting at. The screen said "the one you used most recently will log
+  the activity", but the server picked whichever Mac had checked in most
+  recently — and since every Mac checks in every 15 seconds, that was close to
+  arbitrary. It now picks the Mac you have actually been typing on
+- Quitting the menu bar app tells the server straight away. It used to keep
+  looking available for up to 90 seconds, long enough to be offered as a place
+  to record — or to be handed the timer
+
+**The privacy policy is reachable again (bar)**
+- The first-run screen has always said the full policy is in the menu bar
+  icon's right-click panel. There was no such entry, and the window that would
+  have shown it was never opened by anything. It is now there, under
+  "Privacy & what's collected"
+
+**Review & submit (web)**
+- Nothing expands itself when the page opens. It used to expand a billing
+  period for you, which quietly made a claim about which one mattered; opening
+  one yourself is what makes it clear where you are
+- The Refresh control is a proper button instead of a small line of text that
+  was easy to miss entirely
+
 ## v1.7.3 — 2026-09-08
 
 Menu bar app and web app 1.7.3. A pass over what happens when the server is
