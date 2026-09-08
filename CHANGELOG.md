@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.8.1 — 2026-09-08
+
+Menu bar app and web app 1.8.1.
+
+**Both menus tell you the same thing (bar)**
+- When the server needs a newer version, only the left-click panel said so. The
+  right-click panel carried on as though nothing were wrong — and that is the
+  one with "Check for Updates…" in it. A refusal visible in one menu and not
+  the other reads as a glitch rather than a state
+- It now appears in both, says your time is still being recorded on this Mac
+  and will upload as soon as you update, and offers a button that installs the
+  update there and then
+
 ## v1.8.0 — 2026-09-08
 
 Menu bar app and web app 1.8.0.
