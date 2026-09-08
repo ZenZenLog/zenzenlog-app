@@ -1,5 +1,34 @@
 # Changelog
 
+## v1.8.0 — 2026-09-08
+
+Menu bar app and web app 1.8.0.
+
+**Your timezone, where it belongs (web)**
+- Pick it from your own account menu — "Timezone: UTC+8 [Change]" — and change
+  it whenever you like. Every time on every page follows it immediately
+- Timezones are named the same way everywhere: **UTC+1 (CET)** where a
+  well-known abbreviation exists, **UTC+8** where none does. The offset comes
+  first because it is the part that is never ambiguous — CST is both US Central
+  and China Standard, and most zones have no abbreviation at all
+- Summer time is handled for you, per region and per date. Vienna reads
+  UTC+1 (CET) in January and UTC+2 (CEST) in July; Manila is UTC+8 all year
+- An admin can set a starting timezone when creating a freelancer, and the
+  freelancer can change it afterwards. Whatever they choose is what the admin
+  sees too, because these are that person's working hours
+
+**Show times in UTC (web)**
+- A switch in your account menu puts every time on every page into UTC, for
+  both admins and freelancers. Useful when two people need to compare notes on
+  the same session without arguing about whose clock is right
+- It is per-browser, not per-account: switching it changes nothing for anyone
+  else, and the page always says which clock you are reading
+
+**Menu bar app**
+- Stopped writing diagnostic traces to your Mac. They were left over from
+  fixing a specific problem, recorded which apps you switched between, and
+  never had an end date
+
 ## v1.7.11 — 2026-09-08
 
 Menu bar app 1.7.11.
