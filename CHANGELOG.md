@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.7.11 — 2026-09-08
+
+Menu bar app 1.7.11.
+
+**"Update" installs the update (bar)**
+- The update notice offered a link to the website, which meant downloading,
+  unzipping and dragging — work the app has been able to do for itself since
+  1.7.6. It now installs the update in place, and the "your app is too old"
+  screen does the same, since being refused by the server never stopped the app
+  updating itself. The website remains as a fallback if the update service
+  cannot be reached
+- Neither button draws a stray frame around itself any more. macOS outlines
+  buttons it considers focused when Full Keyboard Access is on, tinted with
+  that Mac's accent colour, which on a coloured control looked like a glitch
+
 ## v1.7.10 — 2026-09-08
 
 Menu bar app and web app 1.7.10.
