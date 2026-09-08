@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.8.2 — 2026-09-08
+
+Menu bar app and web app 1.8.2.
+
+**The update notice is a button, all of it (bar)**
+- The "a new version is available" row looked clickable but only the word
+  "Update" at the far right actually was, so you had to hit a target the width
+  of one word. The whole row responds now
+
+**Showing times in UTC (web)**
+- The switch has moved out of the account menu to sit beside the sessions it
+  changes — next to Refresh for freelancers, beside the sessions heading for
+  admins. It is a property of how you are reading this page, not of who you are
+- It is a real on/off switch now rather than a checkbox, so its state is
+  readable at a glance
+
 ## v1.8.1 — 2026-09-08
 
 Menu bar app and web app 1.8.1.
