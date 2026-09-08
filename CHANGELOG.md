@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.8.3 — 2026-09-08
+
+Menu bar app and web app 1.8.3.
+
+**Buttons that react when you point at them (bar)**
+- "Install the update" and the "a newer version is available" row gave no
+  response to the pointer, so they read as dead text until you clicked anyway.
+  Both light up now, and the notice highlights across its full width — which is
+  also how you can see that the whole row is the target, not just the word at
+  the end
+
+**Release notes you can read (web)**
+- The notes in the update window were dark text on a dark background in Dark
+  Mode. They now follow whichever appearance your Mac is set to
+
 ## v1.8.2 — 2026-09-08
 
 Menu bar app and web app 1.8.2.
