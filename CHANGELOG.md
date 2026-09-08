@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.7.9 — 2026-09-08
+
+Menu bar app and web app 1.7.9.
+
+**The update notice appears where you go to update (bar)**
+- "A newer version is available" showed only in the left-click panel, while
+  "Check for Updates…" lives in the right-click one — so the place you go to
+  update never mentioned there was anything to update to. The right-click row
+  now says "Update to 1.7.9" when there is one, and the whole row is clickable
+  edge to edge instead of stopping short of each side
+
+**Website**
+- Downloads are a disk image now: open it, drag ZenZenLog to Applications,
+  done. A .zip was expanding automatically in Safari and not in other browsers,
+  so half of people got an app and half got an archive to hunt down
+- The install steps say what to do with the disk image, name the app, and no
+  longer explain the menu bar icon — the app introduces itself on first launch
+- The (i) beside the download version sits on the line properly
+
 ## v1.7.8 — 2026-09-08
 
 Menu bar app and web app 1.7.8.
