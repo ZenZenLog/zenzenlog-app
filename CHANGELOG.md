@@ -1,5 +1,51 @@
 # Changelog
 
+## v1.7.2 — 2026-09-08
+
+Menu bar app and web app 1.7.2.
+
+**A session that recorded nothing is no longer billed as if it recorded everything (web + bar)**
+- If the menu bar app ran without Accessibility permission, the timer still
+  counted and the session was billed for its entire span — lunch, coffee and
+  lid-closed sleep at full rate — with no activity to show for it. That was the
+  largest over-billing exposure in the product, and it was silent at both ends
+- The web app now knows when a session was *supposed* to be recorded. One that
+  produced no activity bills **zero** and says so in Review & submit, in plain
+  words, with what to do about it
+- The menu bar app now warns you the moment it happens: "Not recording — this
+  time is not billable", instead of showing a running clock and nothing else
+
+**You have ten minutes of thinking time, not one (bar)**
+- Time stopped counting as billable after 60 seconds without keyboard or mouse.
+  Reading, a phone call, or a whiteboard was enough to fall off the clock. The
+  threshold is now 10 minutes
+- Review & submit shows how much time was set aside this way, per session, so
+  the gap between the clock you watched and the hours you bill is visible and
+  explainable rather than mysterious
+
+**A short welcome, once per version (bar)**
+- A menu-bar app with no Dock icon is genuinely hard to find. On first launch of
+  each new version, a small card appears beneath the icon — with an arrow
+  pointing at where it actually sits in *your* menu bar — covering click,
+  right-click, and what stays on your Mac. Once per version, per Mac
+
+**Version checks that actually run (bar + web)**
+- The version handshake had never been called in any released version, and the
+  "your app is too old" screen could not be reached. When the server did refuse
+  an upload, the app said nothing and kept a clock running
+- The handshake now runs at sign-in, the refusal is surfaced, and that screen
+  now carries a download link and tells you your recorded time is safe and will
+  upload once you update
+- The server can now advertise a recommended version separately from a required
+  one, so a new release can be suggested without blocking anyone
+
+**Smaller things**
+- A session holding a single activity says "Remove This Session" rather than
+  "Remove entire session (1 activity)", which promised a scope you could not see
+- One ordering convention for the version floor: it was declared in two places
+  and kept in step by a comment
+- The app bundle reported version 1.2.2 to Finder in every release since 1.4.0
+
 ## v1.7.0 — 2026-09-07
 
 Menu bar app 1.7.0. The web app moved continuously from 1.5.3 to 1.6.2 over the
