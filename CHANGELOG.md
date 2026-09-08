@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.7.7 — 2026-09-08
+
+Menu bar app and web app 1.7.7.
+
+**The app notices new versions while it is running (bar)**
+- ZenZenLog asked the server which versions it supports only when you signed
+  in. Since it launches at login and then sits in the menu bar for days, that
+  meant asking once and never again: a newer version could be released and the
+  running app would never mention it, unless you happened to sign in afterwards.
+  It now re-checks every half hour
+- This was only ever the *advisory* notice. Being refused outright has always
+  been noticed straight away
+
 ## v1.7.6 — 2026-09-08
 
 Menu bar app and web app 1.7.6.
