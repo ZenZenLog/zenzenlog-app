@@ -2,7 +2,7 @@
 
 ## v1.9.1 — 2026-09-27
 
-Menu bar app 1.9.1 with the v1.9.0 server API.
+Menu bar app 1.9.1, first Windows companion 1.1.0, and the v1.9.0 server API.
 
 **Quiet when you're away (bar)**
 - The app used to check the timer every 3 seconds around the clock — even at
@@ -16,12 +16,22 @@ Menu bar app 1.9.1 with the v1.9.0 server API.
   seconds, exactly as before: they now arrive on the heartbeat you were
   already sending instead of a separate poll.
 
+**A download section that knows your platform (web)**
+- zenzenlog.com now features the download for the device you're on and lists
+  the other one right below it — as a real button, with its requirements and
+  install steps shown either way, so nobody downloads blind.
+- On iPads, phones, and anything neither macOS nor Windows, both downloads
+  appear at the same size. (iPads report themselves as Macs — that took a
+  touchscreen probe to catch, and an iPad test to find.)
+
 **Under the hood**
 - Heartbeats announce their cadence, and the server derives liveness windows
   from it — an idle machine is treated as healthy, not offline.
 - A timer stopped from the web while your Mac dozes can now collect its
   recorded segments for up to 24 hours (was 5 minutes), so nothing billable
   is stranded.
+- The Windows companion (ZenZenLog-setup.zip, self-contained, no installer)
+  ships from the same releases page as the Mac app.
 
 ## v1.8.3 — 2026-09-08
 
