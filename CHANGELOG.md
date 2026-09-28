@@ -1,5 +1,28 @@
 # Changelog
 
+## v1.9.1 — 2026-09-27
+
+Menu bar app 1.9.1 with the v1.9.0 server API.
+
+**Quiet when you're away (bar)**
+- The app used to check the timer every 3 seconds around the clock — even at
+  3 am with nobody at the machine. That server chatter (not your usage) burned
+  our database hosting plan in under three weeks, and it also meant the server
+  was awake all night for nothing. Now the app goes quiet when you're away:
+  fast (3s) while you're working or a timer runs — just as snappy as before —
+  and completely silent when you're not. The moment you touch the keyboard or
+  mouse, it checks in again.
+- Timer starts and stops made in the web app still reach the menu bar within
+  seconds, exactly as before: they now arrive on the heartbeat you were
+  already sending instead of a separate poll.
+
+**Under the hood**
+- Heartbeats announce their cadence, and the server derives liveness windows
+  from it — an idle machine is treated as healthy, not offline.
+- A timer stopped from the web while your Mac dozes can now collect its
+  recorded segments for up to 24 hours (was 5 minutes), so nothing billable
+  is stranded.
+
 ## v1.8.3 — 2026-09-08
 
 Menu bar app and web app 1.8.3.
